@@ -8,6 +8,7 @@ const mongoose = require('mongoose')
 const routes = require('./routes')
 const projectsRoute = require('./routes/API/projects')
 const positionsRoute = require('./routes/API/positions')
+const userRoute = require('./routes/API/user')
 const linksRoute = require('./routes/API/links')
 const PORT = process.env.PORT || 5000;
 mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@lionscave2.jk0ly.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`)
@@ -32,6 +33,7 @@ app.use('/', routes)
 app.use('/API', projectsRoute)
 app.use('/API', positionsRoute)
 app.use('/API', linksRoute)
+app.use('/API', userRoute)
 app.use((req, res, next) => {
     const error = new Error('Not found')
     error.status = 404
