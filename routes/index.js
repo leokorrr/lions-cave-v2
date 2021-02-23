@@ -1,6 +1,5 @@
 const express = require('express')
 const router = express.Router()
-
 router
     .route('/')
     .get((req, res) => res.render('home'))
@@ -13,5 +12,8 @@ router
 router
     .route('/links')
     .get((req, res) => res.render('links'))
+router
+    .route('/login')
+    .get((req, res) => res.render('login'))
 
 module.exports = router
