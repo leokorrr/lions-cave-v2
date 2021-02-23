@@ -21,7 +21,8 @@ router
         const link = new Link({
             _id: new mongoose.Types.ObjectId(),
             name: req.body.name,
-            url: req.body.url
+            url: req.body.url,
+            imageTitle: req.body.imageTitle
         })
         link
             .save()
