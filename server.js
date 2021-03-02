@@ -5,7 +5,10 @@ const path = require('path')
 const morgan = require('morgan')
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
+const cors = require('cors')
 const routes = require('./routes')
+const cookieParser = require('cookie-parser')
+const session = require('express-session')
 const projectsRoute = require('./routes/API/projects')
 const positionsRoute = require('./routes/API/positions')
 const userRoute = require('./routes/API/user')
@@ -16,19 +19,22 @@ app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'hbs')
 app.set('view options', { layout: 'layouts/main' })
 app.use(morgan('dev'))
-app.use(bodyParser.urlencoded({extended: false}))
+app.use(cors({
+    origin: ["http://localhost:3000", "http://localhost:3000/login"],
+    methods: ["GET", "POST", "PATCH", "DELETE"],
+    credentials: true
+}))
+app.use(bodyParser.urlencoded({extended: true}))
 app.use(bodyParser.json())
-app.use((req, res, next) => {
-    res.header('Allow-Control-Allow-Origin', '*')
-    res.header(
-        'Allow-Control-Allow-Headers',
-        'Origin, X-Requested-With, Content-Type, Accept, Authorization')
-    if (req.method === 'OPTIONS') {
-        res.header('Access-Control-Allow-Methods', 'PUT, POST, PATCH, DELETE, GET')
-        return res.status(200).json({})
+app.use(session({
+    key: "admin",
+    secret: process.env.SESSION_SECRET,
+    resave: false,
+    saveUninitialized: false,
+    cookie: {
+        expires: 3600000
     }
-    next()
-})
+}))
 app.use('/', routes)
 app.use('/API', projectsRoute)
 app.use('/API', positionsRoute)

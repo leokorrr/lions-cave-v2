@@ -26,27 +26,37 @@ router
                     res.status(500).json({error: err})
                 })
         })
-
     })
 router
     .route('/login')
+    .get((req, res, next) => {
+        console.log(req.session.user)
+        req.session.user ? 
+            res.send({loggedIn: true, user: req.session.user})
+            :
+            res.send({loggedIn: false})
+    })
     .post((req, res, next) => {
         User.find({email: req.body.email})
             .exec()
             .then(user => {
-                if (user.length < 1) return res.status(401).json({message: 'Auth failed'})
+                if (user.length < 1) return res.send({message: 'Auth failed'})
                 bcrypt.compare(req.body.password, user[0].password, (err, data) => {
                     if (data) {
                         const token = jwt.sign({
                             email: user[0].email,
                             userId: user[0]._id
                         }, process.env.JWT_KEY,{ expiresIn: "1h"})
+                        console.log(token)
+                        // req.session.user = user 
+                        // res.send(user)
                         return res.status(200).json({
                             message: 'Auth successful',
                             token: token
                         })
+                    } else {
+                        return res.send({message: 'Auth failed'})
                     }
-                    return res.status(401).json({message: 'Auth failed'})
                 })
             })
             .catch(err => {

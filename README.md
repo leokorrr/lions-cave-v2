@@ -4,6 +4,7 @@
 - delete backend layouts after creating admin panel on frontend
 - API optimization
 - check exec function. Do I need it?
+- API env REACT_APP_BACKEND_API change name
 
 ### Notes
 I didn't add mongoose validation because I'm the only person who can change database.
