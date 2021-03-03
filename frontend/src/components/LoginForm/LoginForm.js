@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react"
+import React, { useState, useRef } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { Redirect } from 'react-router-dom'
 import Form from "react-validation/build/form"
@@ -20,7 +20,6 @@ const Login = props => {
     const [password, setPassword] = useState('')
     const [loading, setLoading] = useState(false)
     const {isLoggedIn} = useSelector(state => state.auth)
-    console.log(isLoggedIn);
     const {message} = useSelector(state => state.message)
     const dispatch = useDispatch()
     const onChangeEmail = e => setEmail(e.target.value)
