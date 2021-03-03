@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 function AdminPanelPositionsPage() {
     return (
         <div className="admin-panel-page admin-panel-page--positions">
