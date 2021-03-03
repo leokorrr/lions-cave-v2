@@ -1,36 +1,36 @@
 import React, { useEffect, useState } from 'react'
 // import { useDispatch } from "react-redux"
-import { getProjectsFromAPI } from '../../../_services/data.service'
+import { getLinksFromAPI } from '../../../_services/data.service'
 import TableRow from '../TableRow/TableRow'
-import ProjectsTableHead from '../ProjectsTableHead/ProjectsTableHead'
+import LinksTableHead from '../LinksTableHead/LinksTableHead'
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 
-export default function ProjectsTable() {
-    const [projects, setProjects] = useState([])
+export default function PositionsTable() {
+    const [links, setLinks] = useState([])
     useEffect(() => {
-        getProjectsFromAPI()
+        getLinksFromAPI()
             .then(res => {
-                setProjects(res.data)
+                setLinks(res.data)
             })
     }, [])
     return (
         <TableContainer>
             <Table>
                 <TableHead>
-                    <ProjectsTableHead />
+                    <LinksTableHead />
                 </TableHead>
                 <TableBody>
-                    {projects.map(
-                        project => (
+                    {links.map(
+                        link => (
                             <TableRow
-                                key={project._id} 
-                                name={project.name} 
-                                type={project.type}
-                                url={project.url}
-                                projectColor={project.color}/>))}
+                                key={link._id} 
+                                name={link.name} 
+                                url={link.url}
+                                imageTitle={link.imageTitle}
+                                />))}
                 </TableBody>
             </Table>
         </TableContainer>
