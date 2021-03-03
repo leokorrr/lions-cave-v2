@@ -6,8 +6,6 @@ import {
 
 const user = localStorage.getItem("user")
 const initialState = user ? { isLoggedIn: true, user } : { isLoggedIn: false, user: null }
-
-console.log(initialState)
 export default function (state = initialState, action) {
     const { type, payload } = action
     switch (type) {
