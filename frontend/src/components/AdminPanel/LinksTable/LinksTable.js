@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-// import { useDispatch } from "react-redux"
 import { getLinksFromAPI } from '../../../_services/data.service'
 import TableRow from '../TableRow/TableRow'
 import LinksTableHead from '../LinksTableHead/LinksTableHead'
@@ -23,13 +22,14 @@ export default function PositionsTable() {
                     <LinksTableHead />
                 </TableHead>
                 <TableBody>
-                    {links.map(
+                    {links.reverse().map(
                         link => (
                             <TableRow
-                                key={link._id} 
+                                key={link._id}
+                                id={link._id} 
                                 name={link.name} 
                                 url={link.url}
-                                imageTitle={link.imageTitle}
+                                image={link.imageTitle}
                                 />))}
                 </TableBody>
             </Table>

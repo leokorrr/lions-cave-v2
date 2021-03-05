@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-// import { useDispatch } from "react-redux"
 import { getPositionsFromAPI } from '../../../_services/data.service'
 import TableRow from '../TableRow/TableRow'
 import PositionsTableHead from '../PositionsTableHead/PositionsTableHead'
@@ -23,10 +22,11 @@ export default function PositionsTable() {
                     <PositionsTableHead />
                 </TableHead>
                 <TableBody>
-                    {positions.map(
+                    {positions.reverse().map(
                         position => (
                             <TableRow
                                 key={position._id} 
+                                id={position._id} 
                                 title={position.title} 
                                 stack={position.stack}
                                 responsibilities={position.responsibilities}

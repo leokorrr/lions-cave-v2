@@ -5,6 +5,7 @@ import TableRow from '@material-ui/core/TableRow';
 export default function ProjectTableHead() {
     return (
         <TableRow>
+            <TableCell>ID</TableCell>
             <TableCell>Title</TableCell>
             <TableCell>Stack</TableCell>
             <TableCell>Responsibilities</TableCell>

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-// import { useDispatch } from "react-redux"
 import { getProjectsFromAPI } from '../../../_services/data.service'
 import TableRow from '../TableRow/TableRow'
 import ProjectsTableHead from '../ProjectsTableHead/ProjectsTableHead'
@@ -23,10 +22,11 @@ export default function ProjectsTable() {
                     <ProjectsTableHead />
                 </TableHead>
                 <TableBody>
-                    {projects.map(
+                    {projects.reverse().map(
                         project => (
                             <TableRow
                                 key={project._id} 
+                                id={project._id} 
                                 name={project.name} 
                                 type={project.type}
                                 url={project.url}

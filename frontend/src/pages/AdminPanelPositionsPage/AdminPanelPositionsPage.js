@@ -1,11 +1,12 @@
 import React from 'react'
 import PositionsTable from '../../components/AdminPanel/PositionsTable/PositionsTable'
+import InputForm from '../../components/AdminPanel/InputForm/InputForm'
 
 
 function AdminPanelPositionsPage() {
     return (
         <div className="admin-panel-page admin-panel-page--positions">
-            <h1>Welcome to Admin Panel Positions</h1>
+            <InputForm view='positions'/>
             <PositionsTable/>
         </div>
     )
