@@ -1,0 +1,14 @@
+.admin-panel-page {
+    padding: 1rem 3rem;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 1rem 0 3rem;
+    }
+    &__title {
+        font-size: 4rem;
+        margin: 0;
+    }
+}
