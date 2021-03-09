@@ -1,4 +1,8 @@
 @import './scss/colors';
 @import './scss/global';
 @import './scss/lib/admin-panel-page';
-@import '../src/components/AdminPanel/InputForm/input-form'
+@import '../src/components/AdminPanel/InputForm/input-form';
+@import '../src/components/Menu/menu';
+@import '../src/components/Sidebar/sidebar';
+@import '../src/layouts/MainLayout/main-layout';
+@import '../src/components/Links/links'

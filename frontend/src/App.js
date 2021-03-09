@@ -1,7 +1,6 @@
 import {PublicRoute} from './router/PublicRoute/PublicRoute'
 import {ProtectedRoute} from './router/ProtectedRoute/ProtectedRoute'
 import {BrowserRouter as Router, Switch} from 'react-router-dom'
-import {Redirect} from 'react-router'
 import MainLayout from './layouts/MainLayout/MainLayout'
 import './App.scss';
 import LoginPage from './pages/LoginPage/LoginPage'

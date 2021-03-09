@@ -1,0 +1,8 @@
+.sidebar {
+    width: 10rem;
+    border-right: 0.1rem solid $color-black;
+    height: calc(100vh - 18rem);
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+}
