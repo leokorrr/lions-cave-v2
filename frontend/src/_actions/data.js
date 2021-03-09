@@ -9,10 +9,10 @@ export const getProjects = () => (dispatch) => {
     return DataService
         .projects()
         .then(
-            data => {
+            res => {
                 dispatch({
                     type: GET_PROJECTS,
-                    payload: data
+                    payload: res.data
                 })
                 return Promise.resolve()
             },
@@ -27,10 +27,10 @@ export const getPositions = () => (dispatch) => {
     return DataService
         .positions()
         .then(
-            data => {
+            res => {
                 dispatch({
                     type: GET_POSITIONS,
-                    payload: data
+                    payload: res.data
                 })
                 return Promise.resolve()
             },
@@ -45,10 +45,10 @@ export const getLinks = () => (dispatch) => {
     return DataService
         .links()
         .then(
-            data => {
+            res => {
                 dispatch({
                     type: GET_LINKS,
-                    payload: data
+                    payload: res.data
                 })
                 return Promise.resolve()
             },

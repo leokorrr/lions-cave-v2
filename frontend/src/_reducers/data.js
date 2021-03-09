@@ -4,6 +4,7 @@ import {
     GET_POSITIONS
 } from "../_actions/types"
 
+
 const initialState = {}
 export default function (state = initialState, action) {
     const { type, payload } = action
@@ -18,7 +19,7 @@ export default function (state = initialState, action) {
                 ...state,
                 positions: payload
             }
-        case GET_PROJECTS: 
+        case GET_PROJECTS:
             return {
                 ...state,
                 projects: payload

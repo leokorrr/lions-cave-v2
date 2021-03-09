@@ -10,8 +10,7 @@ import TableHead from '@material-ui/core/TableHead';
 
 export default function TableGenerator(props) {
     const [tableContent, setTableContent] = useState([])
-    const {view} = props
-    console.log(view)
+    const view = useSelector(state => state.view)
     useEffect(() => {
         getTableData(view)
             .then(res => {

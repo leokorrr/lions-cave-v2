@@ -32,7 +32,7 @@ const Login = props => {
             dispatch(login(email, password))
                 .then(() => {
                     props.history.push("/admin-panel/projects")
-                    window.location.reaload()
+                    window.location.reload()
                 })
                 .catch(() => {
                     setLoading(false)
