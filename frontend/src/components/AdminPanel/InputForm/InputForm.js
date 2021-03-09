@@ -76,10 +76,12 @@ export default function InputForm() {
                 setTitle(e.target.value) 
                 break
             case 'stack':
-                setStack(e.target.value) 
+                let stackArr = e.target.value.split(" ")
+                setStack(stackArr) 
                 break
             case 'responsibilities':
-                setResponsibilities(e.target.value) 
+                let respsArr = e.target.value.split(" ")
+                setResponsibilities(respsArr) 
                 break
             case 'imageTitle':
                 setImage(e.target.value) 

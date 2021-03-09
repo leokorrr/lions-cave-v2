@@ -43,7 +43,17 @@ export default function ProjectRow(props) {
         return (
             <TableRow>
                 {Object.entries(props)
-                    .map(cell => cell && <TableCell className={classes.tableCell} key={cell[0]}>{cell[1]}</TableCell>)}
+                    .map(cell => cell && 
+                        (cell[0] === 'stack' || cell[0] === 'responsibilities') 
+                            ?
+                            (<TableCell className={classes.tableCell} key={cell[0]}>
+                                {cell[1].map((cellArrWord, index) => (<span key={index}>{cellArrWord} </span>))}
+                            </TableCell>)
+                            :
+                            (<TableCell className={classes.tableCell} key={cell[0]}>
+                                {cell[1]}
+                            </TableCell>))
+                        }
                     <TableCell>
                         <Button className={classes.button} color="secondary" disableElevation onClick={handleDelete}>delete</Button>
                     </TableCell>
