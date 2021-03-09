@@ -2,7 +2,6 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from "react-redux"
 import Table from '../../components/AdminPanel/Table/Table'
 import InputForm from '../../components/AdminPanel/InputForm/InputForm'
-import ReduxTest from '../../components/ReduxTest/ReduxTest'
 import { setView } from '../../_actions/view'
 
 export default function AdminPanelPage(props) {
