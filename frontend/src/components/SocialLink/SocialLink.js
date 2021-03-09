@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import github from '../../images/github.svg'
 import linkedin from '../../images/linkedin.svg'
+import cv from '../../images/cv.svg'
 
 export default function SocialLink(props) {
     const {url, name, imageTitle} = props
@@ -11,6 +12,9 @@ export default function SocialLink(props) {
         }
         if (imageTitle.includes('linkedin')) {
             setLogo(linkedin)
+        }
+        if(imageTitle.includes('cv')) {
+            setLogo(cv)
         }
     }, [])
     return (

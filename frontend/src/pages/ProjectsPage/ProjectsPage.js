@@ -1,9 +1,10 @@
 import React from 'react'
+import Projects from '../../components/Projects/Projects'
 
 function ProjectsPage() {
     return (
         <div className="page page--projects">
-            <h1>Welcome to Projects</h1>
+            <Projects/>
         </div>
     )
 }

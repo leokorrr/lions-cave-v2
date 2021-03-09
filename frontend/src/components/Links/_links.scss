@@ -4,10 +4,9 @@
     align-items: center;
 
     &__link {
-        padding: 3rem 0;
+        padding-bottom: 3rem;
 
-        &:first-of-type {
-            padding-top: 0;
+        &:last-of-type {
             padding-bottom: 0;
         }
     }
