@@ -9,9 +9,6 @@ import AboutPage from './pages/AboutPage/AboutPage'
 import PositionsPage from './pages/PositionsPage/PositionsPage'
 import ProjectsPage from './pages/ProjectsPage/ProjectsPage'
 import AdminPanelPage from './pages/AdminPanelPage/AdminPanelPage'
-import AdminPanelProjectsPage from './pages/AdminPanelProjectsPage/AdminPanelProjectsPage'
-import AdminPanelLinksPage from './pages/AdminPanelLinksPage/AdminPanelLinksPage'
-import AdminPanelPositionsPage from './pages/AdminPanelPositionsPage/AdminPanelPositionsPage'
 
 function App() {
 	return (

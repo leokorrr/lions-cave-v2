@@ -1,13 +1,19 @@
 import {
     GET_PROJECTS,
     GET_LINKS,
-    GET_POSITIONS
+    GET_POSITIONS,
+    POST_PROJECT,
+    POST_LINK,
+    POST_POSITION,
+    DELETE_PROJECT,
+    DELETE_LINK,
+    DELETE_POSITION,
 } from "./types"
 import DataService from '../_services/data.service'
 
 export const getProjects = () => (dispatch) => {
     return DataService
-        .projects()
+        .getProjectsFromAPI()
         .then(
             res => {
                 dispatch({
@@ -22,10 +28,9 @@ export const getProjects = () => (dispatch) => {
             }
         )
 }
-
 export const getPositions = () => (dispatch) => {
     return DataService
-        .positions()
+        .getPositionsFromAPI()
         .then(
             res => {
                 dispatch({
@@ -40,10 +45,9 @@ export const getPositions = () => (dispatch) => {
             }
         )
 }
-
 export const getLinks = () => (dispatch) => {
     return DataService
-        .links()
+        .getLinksFromAPI()
         .then(
             res => {
                 dispatch({

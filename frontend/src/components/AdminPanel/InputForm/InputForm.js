@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react'
+import { useDispatch, useSelector } from "react-redux"
 import Button from '@material-ui/core/Button'
 import TextField from '@material-ui/core/TextField'
 import { makeStyles } from '@material-ui/core/styles'
+import { getFields } from '../../../_helpers/getFields'
 import { postProjectsToAPI, postLinksToAPI, postPositionsToAPI } from '../../../_helpers/postToAPI'
 
 const useStyles = makeStyles({
@@ -16,9 +18,9 @@ const useStyles = makeStyles({
         fontSize: '2rem'
     }
 })
-export default function InputForm(props) {
-    const { view } = props
+export default function InputForm() {
     const classes = useStyles()
+    const view = useSelector(state => state.view)
     const [name, setName] = useState('')
     const [type, setType] = useState('')
     const [url, setUrl] = useState('')
@@ -36,7 +38,7 @@ export default function InputForm(props) {
         setIsFormVisible(!isFormVisible)
     }
     const handleSubmit = () => {
-        switch (view) {
+        switch (view.name) {
             case 'projects':
                 postProjectsToAPI({name: name, type: type, url: url, color: color})
                     .then(() => window.location.reload())
@@ -93,28 +95,15 @@ export default function InputForm(props) {
         }
     }
     useEffect(()=>{
-        switch (view) {
-            case 'positions':
-                setFields(['title', 'stack', 'responsibilities', 'imageTitle', 'fromDate', 'toDate'])
-                break
-            case 'projects':
-                setFields(['name', 'type', 'url', 'color'])
-                break
-            case 'links':
-                setFields(['name', 'url', 'imageTitle'])
-                break
-            default:
-                break
-        }
-
-    }, [])
+        setFields(getFields(view.name))
+    }, [view.name])
     return (
         <div className="input-form">
             <Button className={classes.button} variant="contained" color="primary" disableElevation onClick={handleFormVisibility}>Add</Button>
             {isFormVisible &&
                 (<div className="input-form__jumbo-wrapper">
                     <form className="input-form__form">
-                        <h2 className="input-form__header">Add new {view.slice(0, -1)}</h2>
+                        <h2 className="input-form__header">Add new {view.name.slice(0, -1)}</h2>
                         {fields.map((field, index) => 
                             (<TextField key={index} 
                                 className={classes.textField} 

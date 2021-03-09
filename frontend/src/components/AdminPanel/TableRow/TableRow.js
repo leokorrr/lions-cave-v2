@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
+import { useDispatch, useSelector } from "react-redux"
 import TableCell from '@material-ui/core/TableCell'
 import TableRow from '@material-ui/core/TableRow'
-import { useLocation } from 'react-router-dom'
 import Button from '@material-ui/core/Button'
 import { makeStyles } from '@material-ui/core/styles';
 import {deleteLinkFromAPI, deleteProjectFromAPI, deletePositionFromAPI} from '../../../_helpers/deleteFromAPI'
@@ -16,21 +16,21 @@ const useStyles = makeStyles({
     }
   })
 export default function ProjectRow(props) {
-    const location = useLocation()
     const classes = useStyles()
+    const view = useSelector(state => state.view)
     const handleDelete = () => {
-        switch (location.pathname) {
-            case '/admin-panel/projects':
+        switch (view.name) {
+            case 'projects':
                 deleteProjectFromAPI(props.id)
                     .then(() => window.location.reload())
                     .catch(err => console.log(err))
                 break
-            case '/admin-panel/positions':
+            case 'positions':
                 deletePositionFromAPI(props.id)
                     .then(() => window.location.reload())
                     .catch(err => console.log(err))
                 break
-            case '/admin-panel/links': 
+            case 'links': 
                 deleteLinkFromAPI(props.id)
                     .then(() => window.location.reload())
                     .catch(err => console.log(err))
