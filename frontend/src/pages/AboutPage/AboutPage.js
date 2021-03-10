@@ -1,9 +1,10 @@
 import React from 'react'
+import About from '../../components/About/About'
 
 function AboutPage() {
     return (
         <div className="page page--about">
-            <h1>Welcome to Lions Cave</h1>
+            <About />
         </div>
     )
 }
