@@ -1,9 +1,12 @@
 import React from 'react'
+import TimeLine from '../../components/TimeLine/TimeLine'
+import Positions from '../../components/Positions/Positions'
 
 function PositionsPage() {
     return (
         <div className="page page--positions">
-            <h1>Welcome to Positions</h1>
+            <TimeLine />
+            <Positions />
         </div>
     )
 }

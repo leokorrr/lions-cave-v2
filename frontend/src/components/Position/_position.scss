@@ -1,0 +1,18 @@
+.position {
+    width: 100%;
+    display: flex;
+
+    &__col {
+        width: 50%;
+    }
+
+    &__img-ctn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 80%;
+        }
+    }
+}

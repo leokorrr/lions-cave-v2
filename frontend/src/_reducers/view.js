@@ -1,4 +1,4 @@
-import { SET_VIEW } from "../_actions/types";
+import { SET_VIEW } from "../_actions/types"
 
 const initialState = {name: ''}
 export default function(state = initialState, action) {

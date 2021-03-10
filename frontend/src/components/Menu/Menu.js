@@ -13,7 +13,7 @@ export default function Menu() {
                 </div>
                 <NavLink to="/" className="menu__link">About</NavLink>
                 <NavLink to="/projects" className="menu__link">Projects</NavLink>
-                <NavLink to="/positions" className="menu__link">Positions</NavLink>
+                <NavLink to="/positions" className="menu__link">Experience</NavLink>
             </div>
         </nav>
     )

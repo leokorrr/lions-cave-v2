@@ -1,0 +1,37 @@
+.timeline-element {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    &:hover {
+        cursor: pointer;
+
+        // .timeline-element__title {
+        //     display: block;
+        // }
+    }
+
+    &__line {
+        height: 0.4rem;
+        width: 100%;
+    }
+
+    &__title {
+        // display: none;
+        margin-top: 1rem;
+        font-size: 1.4rem;
+        font-family: 'Bitter', serif;
+    }
+
+    &__point {
+        height: 1.2rem;
+        width: 1.2rem;
+        position: absolute;
+        left: -1.2rem;
+        background-color: $color-white;
+        bottom: 1.9rem;
+        border-radius: 4rem;
+        border: 0.4rem solid black;
+    }
+}

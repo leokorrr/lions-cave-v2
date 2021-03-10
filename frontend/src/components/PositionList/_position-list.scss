@@ -1,0 +1,23 @@
+.position-list {
+    &__header {
+        font-weight: bold;
+        font-size: 3.6rem;
+        margin: 0;
+    }
+
+    &__list {
+        padding: 0;
+        margin-bottom: 3rem;
+        list-style: none;
+
+        li {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            font-family: 'Bitter', serif;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
