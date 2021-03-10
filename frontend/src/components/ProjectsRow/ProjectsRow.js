@@ -8,12 +8,18 @@ export default function ProjectsRow(props) {
     return (
         <div className="projects-row">
             <h2 className="projects-row__title">{projectType.charAt(0).toUpperCase() + projectType.slice(1)} projects</h2>
-            {(projects.projects && projects.projects.length > 0) &&
-                projects.projects
-                    .filter((project, index) => project.type === projectType)
-                    .map((filteredProject, index) => (
-                        <Project key={index} name={filteredProject.name} />
-                    ))}
+            <div className="projects-row__projects-ctn">
+                {(projects.projects && projects.projects.length > 0) &&
+                    projects.projects
+                        .filter((project, index) => project.type === projectType)
+                        .map((filteredProject, index) => (
+                            <Project key={index} 
+                                name={filteredProject.name} 
+                                color={filteredProject.color}
+                                url={filteredProject.url}
+                                />
+                        ))}
+            </div>
         </div>
     )
 }

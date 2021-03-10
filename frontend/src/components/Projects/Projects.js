@@ -7,7 +7,6 @@ export default function Projects() {
     const view = useSelector(state => state.view)
     const dispatch = useDispatch()
     const projectTypes = ['programming', 'design', 'companies']
-
     useEffect(() => {
         dispatch(getProjects())
     }, [view.name])
