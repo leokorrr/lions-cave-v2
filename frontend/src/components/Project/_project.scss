@@ -1,6 +1,7 @@
 .project {
     margin-right: 6rem;
-
+    margin-bottom: 0;
+    width: unset;
     &:last-of-type {
         margin-right: 0;
     }
@@ -12,11 +13,20 @@
     }
 
     &__content {
-        width: 30rem;
-        height: 20rem;
         display: flex;
         align-items: center;
         justify-content: center;
+        width: 30rem;
+        height: 20rem;
+
+        @media only screen and (max-width: 992px) {
+            width: 100%;
+
+            img {
+                width: 80%;
+                height: 80%;
+            }
+        }
     }
 
     &__link {
@@ -25,5 +35,24 @@
         &:hover {
             text-decoration: none;
         }
+    }
+
+    @media only screen and (max-width: 1600px) {
+        margin-bottom: 6rem;
+    }
+
+    @media only screen and (max-width: 992px) {
+        margin-right: 3rem;
+        margin-bottom: 3rem;
+        width: calc(50% - 1.5rem);
+
+        &:nth-child(2) {
+            margin-right: 0;
+        }
+    }
+
+    @media only screen and (max-width: 680px) {
+        width: 100%;
+        margin-right: 0;
     }
 }
