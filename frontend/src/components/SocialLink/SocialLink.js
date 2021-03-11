@@ -18,6 +18,6 @@ export default function SocialLink(props) {
         }
     }, [])
     return (
-        <a href={props.url} target="_blank"><img src={logo} alt=""/></a>
+        <a href={url} target="_blank" rel="noreferrer"><img src={logo} alt={name}/></a>
     )
 }

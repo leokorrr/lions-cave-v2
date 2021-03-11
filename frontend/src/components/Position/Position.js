@@ -13,10 +13,8 @@ export default function Position(props) {
         responsibilities,
         imageTitle,
         fromDate,
-        toDate,
-        display
+        toDate
     } = props
-    const [positionStack, setPositionStack] = useState(stack)
     const [logo, setLogo] = useState()
     useEffect(() => {
         if (imageTitle === 'freelance') {

@@ -2,12 +2,6 @@ import {
     GET_PROJECTS,
     GET_LINKS,
     GET_POSITIONS,
-    POST_PROJECT,
-    POST_LINK,
-    POST_POSITION,
-    DELETE_PROJECT,
-    DELETE_LINK,
-    DELETE_POSITION,
 } from "./types"
 import DataService from '../_services/data.service'
 

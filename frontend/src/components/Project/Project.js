@@ -19,7 +19,7 @@ export default function Project(props) {
     }, [])
     return (
         <div className="project">
-            <a href={url} className="project__link" target="_blank">
+            <a href={url} className="project__link" target="_blank" rel="noreferrer">
                 <div className="project__content" style={{backgroundColor: color}}>
                     {!logo && <span className="project__title">{name}</span>}
                     {logo && <img src={logo} alt="logo"/>}

@@ -16,7 +16,7 @@ export default function About() {
             </div>
             <div className="about__col">
                 <div className="about__img-ctn">
-                    <img src={leon} alt="leon-photo"/>
+                    <img src={leon} alt="leon"/>
                 </div>
             </div>
         </div>

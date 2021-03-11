@@ -7,9 +7,7 @@ export default function TimeLine() {
     const dispatch = useDispatch()
     const [lastWorkDay, setLastWorkDay] = useState()
     const [diffBetweenLastAndFirstWorkDay, setDiffBetweenLastAndFirstWorkDay] = useState()
-    const [diffBetweenNowAndFirstWorkDay, setDiffBetweenNowAndFirstWorkDay] = useState()
     const firstWorkDay = new Date(2017, 0, 1)
-    const todayDate = new Date()
     const positions = useSelector(state => state.data)
     useEffect(() => {
         dispatch(getPositions())
@@ -21,7 +19,6 @@ export default function TimeLine() {
     }, [positions])
     useEffect(() => {
         setDiffBetweenLastAndFirstWorkDay(Math.ceil((lastWorkDay - firstWorkDay)/(1000*60*60*24)))
-        setDiffBetweenNowAndFirstWorkDay(Math.ceil((todayDate - firstWorkDay)/(1000*60*60*24)))
     }, [lastWorkDay])
     return (
         <div className="timeline">
