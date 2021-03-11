@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import { useDispatch, useSelector } from "react-redux"
+import { useDispatch } from "react-redux"
 import { setPositionView } from '../../_actions/positionView'
+import { useMediaPredicate } from "react-media-hook";
 
 export default function TimeLineElement(props) {
     const { 
@@ -13,6 +14,7 @@ export default function TimeLineElement(props) {
     } = props
     const [workTimeInPercent, setWorkTimeInPercent] = useState()
     const dispatch = useDispatch()
+    const lessThan992 = useMediaPredicate("(max-width: 992px)");
     useEffect(() => {
         const diffTime = Math.abs(Date.parse(toDate) - Date.parse(fromDate))
         const diffDays = Math.ceil(diffTime / (1000*60*60*24))
@@ -29,9 +31,14 @@ export default function TimeLineElement(props) {
                 style={{backgroundColor: color}}
             ></div>
             <div className="timeline-element__point" style={{borderColor: color}}></div>
-            <div className="timeline-element__title">
-                {title.split(" at")[0]}
-            </div>
+            {!lessThan992 &&
+                <div className="timeline-element__title">
+                    {title.split(" at")[0]}
+                </div>}
+            {lessThan992 &&
+                <div className="timeline-element__title">
+                    {title.charAt(0)}
+                </div>}
         </div>
         
     )

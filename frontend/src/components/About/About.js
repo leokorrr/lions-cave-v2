@@ -6,11 +6,11 @@ export default function About() {
         <div className="about">
             <div className="about__col">
                 <div className="about__tag about__tag--sm about__tag--welcome-phrase">Hi, my name is <br/> <span className="about__name">Leo</span></div>
-                <dib className="about__tag about__tag--sm about__tag--melomaniac">Melomaniac</dib>
-                <dib className="about__tag about__tag--sm about__tag--stack">MERN stack</dib>
-                <dib className="about__tag about__tag--sm about__tag--living">Living in Poland</dib>
-                <dib className="about__tag about__tag--sm about__tag--origin">Belarus origin</dib>
-                <dib className="about__tag about__tag--sm about__tag--citizen">Citizen of the world</dib>
+                <div className="about__tag about__tag--sm about__tag--melomaniac">Melomaniac</div>
+                <div className="about__tag about__tag--sm about__tag--stack">MERN stack</div>
+                <div className="about__tag about__tag--sm about__tag--living">Living in Poland</div>
+                <div className="about__tag about__tag--sm about__tag--origin">Belarus origin</div>
+                <div className="about__tag about__tag--sm about__tag--citizen">Citizen of the world</div>
                 <div className="about__tag about__tag--md about__tag--web-dev">Web developer</div>
                 <div className="about__tag about__tag--lg about__tag--designer">Designer</div>
             </div>

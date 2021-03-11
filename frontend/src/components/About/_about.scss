@@ -1,5 +1,6 @@
 .about {
     display: flex;
+    margin-bottom: 0;
 
     &__name {
         color: $color-red;
@@ -8,66 +9,98 @@
 
     &__tag {
         font-weight: bold;
-
-        &--sm {
-            font-size: 6.4rem;
-        }
-
-        &--md {
-            font-size: 9.6rem;
-        }
-
-        &--lg {
-            font-size: 14.4rem;
-        }
         
         &--welcome-phrase {
-            position: absolute;
-            left: 35rem;
+            left: calc(170px + (170 - 100) * ((100vw - 992px) / (1920 - 992)))
         }
 
         &--melomaniac {
-            position: absolute;
             left: -13.8rem;
             transform: rotate(-90deg);
             bottom: 50rem;
         }
 
         &--citizen {
-            position: absolute;
             right: -5rem;
             transform: rotate(90deg);
             top: 37.8rem;
         }
 
         &--origin {
-            position: absolute;
             bottom: -2.8rem;
             right: 58rem;
         }
 
         &--web-dev {
-            position: absolute;
-            bottom: 40rem;
+            bottom: 35rem;
             left: 20rem;
         }
 
         &--designer {
-            position: absolute;
             bottom: 14.5rem;
             right: 30%;
         }
 
         &--living {
-            position: absolute;
             bottom: 10rem;
             left: 12.5rem;
         }
 
         &--stack {
+            left: 46rem;
+            top: 31rem;
+
+            @media only screen and (max-width: 1349px) {
+                top: 40rem;
+            }
+        }
+
+
+        &--sm {
             position: absolute;
-            left: 59rem;
-            top: 33rem;
+            font-size: calc(44px + (44 - 27) * ((100vw - 992px) / (1920 - 992)));
+
+            @media only screen and (max-width: 992px) {
+                position: relative;
+                left: unset;
+                bottom: unset;
+                top:unset;
+                right:unset;
+                transform: rotate(0deg);
+                text-align: center;
+                color: $color-red;
+                margin-bottom: 1rem;
+            }
+
+            &:nth-child(2n) {
+                @media only screen and (max-width: 992px) {
+                    color: $color-black;
+                }
+            }
+        }
+
+        &--md {
+            position: absolute;
+            font-size: calc(65px + (65 - 40) * ((100vw - 992px) / (1920 - 992)));
+            text-align: center;
+
+            @media only screen and (max-width: 992px) {
+                position: relative;
+                left: unset;
+                bottom: unset;
+            }
+        }
+
+        &--lg {
+            position: absolute;
+            font-size: calc(98px + (98 - 61) * ((100vw - 992px) / (1920 - 992)));
+            text-align: center;
+
+            @media only screen and (max-width: 992px) {
+                position: relative;
+                bottom: unset;
+                right:unset;
+            }
         }
     }
 
@@ -75,5 +108,23 @@
         position: absolute;
         top: 0;
         right: 30rem;
+
+        img {
+            @media only screen and (min-width: 1350px) {
+                width: calc(400px + (400 - 275) * ((100vw - 992px) / (1920 - 992)));
+            }
+
+            @media only screen and (max-width: 1349px) {
+                width: 27.5rem;
+            }
+        }
+
+        @media only screen and (max-width: 992px) {
+            display: none;
+        }
+    }
+
+    @media only screen and (max-width: 992px) {
+        margin-bottom: 2rem;
     }
 }

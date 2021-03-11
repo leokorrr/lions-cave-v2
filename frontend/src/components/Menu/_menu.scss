@@ -30,4 +30,22 @@
             height: 5.5rem;
         }
     }
+
+    &__hamburger-icon-ctn {
+        width: 10rem;
+        justify-content: center;
+        align-items: center;
+        border-right: 0.1rem solid black;
+        height: 100%;
+        margin-right: 3rem;
+        display: none;
+
+        @media only screen and (max-width: 992px) {
+            display: flex;
+        }
+    }
+
+    @media only screen and (max-width: 992px) {
+        width: calc(100% - 2rem);
+    }
 }
