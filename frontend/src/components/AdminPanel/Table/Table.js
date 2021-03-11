@@ -68,8 +68,9 @@ export default function TableGenerator() {
                             <TableRow
                                 key={position._id} 
                                 id={position._id} 
-                                title={position.title} 
-                                stack={position.stack}
+                                title={position.title}
+                                stack={position.stack} 
+                                color={position.color}
                                 responsibilities={position.responsibilities}
                                 imageTitle={position.imageTitle}
                                 fromDate={position.fromDate}

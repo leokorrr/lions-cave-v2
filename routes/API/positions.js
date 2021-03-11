@@ -24,6 +24,7 @@ router
             stack: req.body.stack,
             responsibilities: req.body.responsibilities,
             imageTitle: req.body.imageTitle,
+            color: req.body.color,
             fromDate: req.body.fromDate,
             toDate: req.body.toDate
         })

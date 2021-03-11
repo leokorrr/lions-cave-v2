@@ -5,6 +5,7 @@ const positionSchema = mongoose.Schema({
     stack: Array,
     responsibilities: Array,
     imageTitle: String,
+    color: String,
     fromDate: Date,
     toDate: Date
 })

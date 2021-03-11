@@ -35,7 +35,7 @@ export default function TimeLine() {
                             fromDate={position.fromDate}
                             toDate={position.toDate}
                             title={position.title}
-                            color={Math.floor(Math.random()*16777215).toString(16)}
+                            color={position.color}
                         />
                     ))}
         </div>

@@ -5,7 +5,7 @@ export const getFields = view => {
         case 'links': 
             return ['name', 'url', 'imageTitle']
         case 'positions':
-            return ['title', 'stack', 'responsibilities', 'imageTitle', 'fromDate', 'toDate']
+            return ['title', 'stack', 'color', 'responsibilities', 'imageTitle', 'fromDate', 'toDate']
         default: 
             return ['error']
     }

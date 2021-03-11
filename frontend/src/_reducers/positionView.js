@@ -1,6 +1,6 @@
 import { SET_POSITION_VIEW } from '../_actions/types'
 
-const initialState = {positionViewId: '60489863f260da2eee28a13b'}
+const initialState = {positionViewId: '6048992cf260da2eee28a13c'}
 export default function(state = initialState, action) {
     const { payload, type } = action
     if (type === SET_POSITION_VIEW) {

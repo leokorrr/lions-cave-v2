@@ -23,12 +23,12 @@ export default function TimeLineElement(props) {
         dispatch(setPositionView(id))
     }
     return (
-        <div className="timeline-element"  onClick={(e)=>handleViewChange(e, _id)}  style={{width: `${workTimeInPercent}%`}}>
+        <div className="timeline-element" onClick={(e)=>handleViewChange(e, _id)}  style={{width: `${workTimeInPercent}%`}}>
             <div 
                 className="timeline-element__line"
-                style={{backgroundColor: `#${color}`}}
+                style={{backgroundColor: color}}
             ></div>
-            <div className="timeline-element__point"></div>
+            <div className="timeline-element__point" style={{borderColor: color}}></div>
             <div className="timeline-element__title">
                 {title.split(" at")[0]}
             </div>
