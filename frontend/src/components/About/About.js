@@ -7,6 +7,7 @@ export default function About() {
             <div className="about__col">
                 <div className="about__tag about__tag--sm about__tag--welcome-phrase">Hi, my name is <br/> <span className="about__name">Leo</span></div>
                 <dib className="about__tag about__tag--sm about__tag--melomaniac">Melomaniac</dib>
+                <dib className="about__tag about__tag--sm about__tag--stack">MERN stack</dib>
                 <dib className="about__tag about__tag--sm about__tag--living">Living in Poland</dib>
                 <dib className="about__tag about__tag--sm about__tag--origin">Belarus origin</dib>
                 <dib className="about__tag about__tag--sm about__tag--citizen">Citizen of the world</dib>
