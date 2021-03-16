@@ -8,19 +8,21 @@ import AboutPage from './pages/AboutPage/AboutPage'
 import PositionsPage from './pages/PositionsPage/PositionsPage'
 import ProjectsPage from './pages/ProjectsPage/ProjectsPage'
 import AdminPanelPage from './pages/AdminPanelPage/AdminPanelPage'
+import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
 
 function App() {
 	return (
     	<div>
 			<Router basename={`/`}>
 				<Switch>
-					<PublicRoute exact path={`/`} component={AboutPage} layout={MainLayout}></PublicRoute>
-					<PublicRoute path={`/projects`} component={ProjectsPage} layout={MainLayout}></PublicRoute>
-					<PublicRoute path={`/positions`} component={PositionsPage} layout={MainLayout}></PublicRoute>
-					<PublicRoute path={`/login`} component={LoginPage} layout={MainLayout}></PublicRoute>
-					<ProtectedRoute routeView='projects' path={`/admin-panel/projects`} component={AdminPanelPage} layout={MainLayout}></ProtectedRoute>
-					<ProtectedRoute routeView='links' path={`/admin-panel/links`} component={AdminPanelPage} layout={MainLayout}></ProtectedRoute>
-					<ProtectedRoute routeView='positions' path={`/admin-panel/positions`} component={AdminPanelPage} layout={MainLayout}></ProtectedRoute>
+					<PublicRoute exact path={`/`} component={AboutPage} layout={MainLayout} />
+					<PublicRoute path={`/projects`} component={ProjectsPage} layout={MainLayout} />
+					<PublicRoute path={`/positions`} component={PositionsPage} layout={MainLayout} />
+					<PublicRoute path={`/login`} component={LoginPage} layout={MainLayout} />
+					<PublicRoute component={NotFoundPage} layout={MainLayout} />
+					<ProtectedRoute routeView='projects' path={`/admin-panel/projects`} component={AdminPanelPage} layout={MainLayout} />
+					<ProtectedRoute routeView='links' path={`/admin-panel/links`} component={AdminPanelPage} layout={MainLayout} />
+					<ProtectedRoute routeView='positions' path={`/admin-panel/positions`} component={AdminPanelPage} layout={MainLayout} />
 				</Switch>
 			</Router>
 		</div>

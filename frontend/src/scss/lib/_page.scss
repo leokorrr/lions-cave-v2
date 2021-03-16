@@ -6,6 +6,16 @@
         padding-top: 4rem;
     }
 
+    &--not-found {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        img {
+            width: 60%;
+        }
+    }
+
     .links {
         display: none;
 
