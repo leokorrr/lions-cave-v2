@@ -45,12 +45,11 @@ app.use((error, req, res, next) => {
         error: {message: error.message}
     })
 })
-if (process.env.NODE_ENV === 'production') {
-    app.use(express.static(path.join(__dirname, 'build')))
+app.use(express.static(path.join(__dirname, 'build')))
 
     // app.get('*', function(req, res) {
     //     res.sendFile(path.join(__dirname, '/frontend/build', 'index.html'))
     // })
-}
+
 
 app.listen(PORT, () => console.log(`Server is running, http://localhost:${PORT}`))
