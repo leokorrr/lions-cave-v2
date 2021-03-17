@@ -50,7 +50,6 @@ app.use((error, req, res, next) => {
         error: {message: error.message}
     })
 })
-
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static('frontend/build'))
     app.get('*', (req, res) => {
