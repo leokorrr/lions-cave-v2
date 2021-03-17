@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/static/css/main.1420acdd.chunk.css",
+    "main.js": "/static/js/main.cf7a4caa.chunk.js",
+    "main.js.map": "/static/js/main.cf7a4caa.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.248907bc.js",
+    "runtime-main.js.map": "/static/js/runtime-main.248907bc.js.map",
+    "static/js/2.6c5d9a0d.chunk.js": "/static/js/2.6c5d9a0d.chunk.js",
+    "static/js/2.6c5d9a0d.chunk.js.map": "/static/js/2.6c5d9a0d.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.1420acdd.chunk.css.map": "/static/css/main.1420acdd.chunk.css.map",
+    "static/js/2.6c5d9a0d.chunk.js.LICENSE.txt": "/static/js/2.6c5d9a0d.chunk.js.LICENSE.txt",
+    "static/media/cloud-services.e2124207.svg": "/static/media/cloud-services.e2124207.svg",
+    "static/media/cv.e0232fd3.svg": "/static/media/cv.e0232fd3.svg",
+    "static/media/essilor.dc669f9d.svg": "/static/media/essilor.dc669f9d.svg",
+    "static/media/freelancer.10874786.svg": "/static/media/freelancer.10874786.svg",
+    "static/media/github.58b24f52.svg": "/static/media/github.58b24f52.svg",
+    "static/media/inra.f14898d4.svg": "/static/media/inra.f14898d4.svg",
+    "static/media/intern.b0c5e7a7.svg": "/static/media/intern.b0c5e7a7.svg",
+    "static/media/kaliop.df7d876e.svg": "/static/media/kaliop.df7d876e.svg",
+    "static/media/leon.b7c7c55d.jpg": "/static/media/leon.b7c7c55d.jpg",
+    "static/media/linkedin.ed6e0b64.svg": "/static/media/linkedin.ed6e0b64.svg",
+    "static/media/logo.9699341b.svg": "/static/media/logo.9699341b.svg",
+    "static/media/notfound.92616738.svg": "/static/media/notfound.92616738.svg",
+    "static/media/unicef.e3ff2525.svg": "/static/media/unicef.e3ff2525.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.248907bc.js",
+    "static/js/2.6c5d9a0d.chunk.js",
+    "static/css/main.1420acdd.chunk.css",
+    "static/js/main.cf7a4caa.chunk.js"
+  ]
+}
