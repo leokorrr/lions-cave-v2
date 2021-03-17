@@ -31,7 +31,6 @@ app.use(session({
         expires: 3600000
     }
 }))
-app.use('/', routes)
 app.use('/API', projectsRoute)
 app.use('/API', positionsRoute)
 app.use('/API', linksRoute)
@@ -48,13 +47,10 @@ app.use((error, req, res, next) => {
     })
 })
 if (process.env.NODE_ENV === 'production') {
-    console.log('in')
     app.use(express.static('frontend/build'))
     app.get('*', (req, res) => {
         res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'))
     })
-} else {
-    console.log('out')
-}
+}  console.log('out')
 
 app.listen(PORT, () => console.log(`Server is running, http://localhost:${PORT}`))
