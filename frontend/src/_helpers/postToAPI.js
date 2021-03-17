@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 export const postLinksToAPI = data => {
-    return axios.post(`$/API/inks`, data)
+    return axios.post(`/API/links`, data)
 }
 export const postProjectsToAPI = data => {
     console.log(data)
