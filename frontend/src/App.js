@@ -19,10 +19,10 @@ function App() {
 					<PublicRoute path={`/projects`} component={ProjectsPage} layout={MainLayout} />
 					<PublicRoute path={`/positions`} component={PositionsPage} layout={MainLayout} />
 					<PublicRoute path={`/login`} component={LoginPage} layout={MainLayout} />
-					<PublicRoute component={NotFoundPage} layout={MainLayout} />
 					<ProtectedRoute routeView='projects' path={`/admin-panel/projects`} component={AdminPanelPage} layout={MainLayout} />
 					<ProtectedRoute routeView='links' path={`/admin-panel/links`} component={AdminPanelPage} layout={MainLayout} />
 					<ProtectedRoute routeView='positions' path={`/admin-panel/positions`} component={AdminPanelPage} layout={MainLayout} />
+					<PublicRoute component={NotFoundPage} layout={MainLayout} />
 				</Switch>
 			</Router>
 		</div>
