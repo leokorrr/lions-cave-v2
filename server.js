@@ -14,9 +14,6 @@ const userRoute = require('./routes/API/user')
 const linksRoute = require('./routes/API/links')
 const PORT = process.env.PORT || 5000;
 mongoose.connect(process.env.MONGODB_URI || `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@lionscave2.jk0ly.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`)
-app.set('views', path.join(__dirname, 'views'))
-app.set('view engine', 'hbs')
-app.set('view options', { layout: 'layouts/main' })
 app.use(morgan('dev'))
 app.use(cors({
     origin: ["http://localhost:3000", "http://localhost:3000/login"],
