@@ -6,7 +6,6 @@ const morgan = require('morgan')
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 const cors = require('cors')
-const routes = require('./routes')
 const session = require('express-session')
 const projectsRoute = require('./routes/API/projects')
 const positionsRoute = require('./routes/API/positions')
@@ -51,6 +50,6 @@ if (process.env.NODE_ENV === 'production') {
     app.get('*', (req, res) => {
         res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'))
     })
-}  console.log('out')
+}
 
 app.listen(PORT, () => console.log(`Server is running, http://localhost:${PORT}`))
