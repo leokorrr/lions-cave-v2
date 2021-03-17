@@ -3,7 +3,7 @@ import jwt from 'jwt-decode'
 
 const login = (email, password) => {
     return axios
-        .post(`${process.env.REACT_APP_BACKEND_API}login`, {
+        .post(`/API/login`, {
             email,
             password
         })

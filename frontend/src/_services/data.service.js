@@ -4,10 +4,10 @@ export const getProjectsFromAPI = async () => {
     return await axios.get(`/API/projects`)
 }
 export const getLinksFromAPI = async () => {
-    return await axios.get(`${process.env.REACT_APP_BACKEND_API}links`)
+    return await axios.get(`/API/links`)
 }
 export const getPositionsFromAPI = async () => {
-    return await axios.get(`${process.env.REACT_APP_BACKEND_API}positions`)
+    return await axios.get(`/API/positions`)
 }
 
 export default {
